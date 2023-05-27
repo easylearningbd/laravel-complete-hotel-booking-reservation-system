@@ -1,0 +1,1469 @@
+@media only screen and (max-width: 767px) {
+  /* Default CSS */
+  body {
+    font-size: 14px;
+  }
+  .ptb-100 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .pt-100 {
+    padding-top: 50px;
+  }
+  .ptb-70 {
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+  .pb-100 {
+    padding-bottom: 50px;
+  }
+  .pt-70 {
+    padding-top: 30px;
+  }
+  .pb-70 {
+    padding-bottom: 20px;
+  }
+  .pt-45 {
+    padding-top: 30px;
+  }
+  .default-btn {
+    padding: 10px 30px;
+  }
+  .section-title span {
+    font-size: 14px;
+  }
+  .section-title h2 {
+    font-size: 26px;
+    margin-top: 0;
+  }
+  h3 {
+    font-size: 21px;
+  }
+  /* Default CSS End */
+  .language-list {
+    top: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 35px;
+    z-index: 9999;
+    text-align: center;
+    max-width: 100px;
+    left: -25px;
+  }
+  .header-right {
+    text-align: center;
+  }
+  .header-right ul li {
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+  .header-right ul li::before {
+    display: none;
+    margin-bottom: 0;
+  }
+  /* Navbar CSS */
+  .mobile-nav .logo img {
+    max-width: 120px;
+    height: 40px;
+    margin-top: -5px;
+  }
+  .mobile-nav .logo .logo-two {
+    display: none;
+  }
+  .nav-item-btn {
+    display: inline-block;
+    text-align: center;
+  }
+  .nav-item-btn .default-btn {
+    width: 100px !important;
+    margin: 0em 5% !important;
+    text-align: center !important;
+    margin-bottom: 10px;
+    float: none !important;
+    color: #ffffff !important;
+  }
+  .nav-btn {
+    display: none;
+  }
+  .other-option {
+    display: none;
+  }
+  .d-in-line {
+    display: none;
+  }
+  .side-nav-responsive {
+    display: block;
+  }
+  .side-nav-responsive .container {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .side-nav-responsive .container .container {
+    position: absolute;
+    top: 55px;
+    right: -20px;
+    max-width: 245px;
+    margin-left: auto;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    z-index: 2;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* Navbar CSS End */
+  .sidebar-modal .sidebar-modal-inner {
+    width: 300px;
+  }
+  /* Navbar CSS End */
+  /* Main Banner CSS End */
+  .banner-area::before {
+    background-image: -webkit-gradient(linear, left top, right top, from(#ffffff), to(#ffffff4a));
+    background-image: linear-gradient(to right, #ffffff, #ffffff4a);
+  }
+  .banner-content {
+    padding: 140px 0 80px;
+    margin-left: auto;
+    text-align: center;
+  }
+  .banner-content h1 {
+    font-size: 35px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .banner-content p {
+    font-size: 16px;
+  }
+  .banner-area-two {
+    background-image: none;
+    padding-top: 120px;
+    padding-bottom: 80px;
+    background-color: #FEF4F2;
+  }
+  .banner-another {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .banner-another h1 {
+    font-size: 35px;
+  }
+  .banner-another p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .banner-another .banner-shape {
+    display: none;
+  }
+  .banner-img {
+    margin-top: 30px;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .banner-img::before {
+    display: none;
+  }
+  /* Main Banner CSS End */
+  /* Banner Form Area CSS */
+  .banner-form {
+    position: inherit;
+    margin-top: 50px;
+    padding: 20px 25px 25px;
+    border-radius: 0;
+    max-width: 100%;
+    margin-left: auto;
+  }
+  .banner-form .form-group {
+    margin-bottom: 15px;
+  }
+  .banner-form .form-group label {
+    margin-bottom: 10px;
+  }
+  .banner-form .form-group .form-control {
+    height: 50px;
+    border: none;
+    background-color: #ffffff;
+    font-weight: 400;
+    border-radius: 0;
+  }
+  .banner-form .nice-select {
+    height: 50px;
+    line-height: 50px;
+  }
+  .banner-form .nice-select::after {
+    top: 45%;
+  }
+  .banner-form .default-btn {
+    float: none;
+    margin-top: 15px;
+    width: 100%;
+  }
+  /* Banner Form Area CSS End */
+  /* Inner Banner */
+  .inner-banner .inner-title {
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+  .inner-banner .inner-title h3 {
+    font-size: 26px;
+    margin-top: 0px;
+  }
+  .inner-banner .inner-title ul li {
+    font-size: 16px;
+  }
+  /* Inner Banner End */
+  /* About Area CSS */
+  .about-img {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+  .about-img::before {
+    display: none;
+  }
+  .about-img-2 {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about-content {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+  /* About Area CSS End */
+  /* Services Area CSS */
+  .services-area {
+    margin-bottom: 70px;
+  }
+  .services-area .owl-nav .owl-prev {
+    top: auto;
+    bottom: -40px;
+    left: 33.5%;
+  }
+  .services-area .owl-nav .owl-next {
+    top: auto;
+    bottom: -40px;
+    right: 33.5%;
+  }
+  .services-item {
+    padding: 20px 15px;
+    text-align: center;
+  }
+  .services-item h3 {
+    font-size: 19px;
+    max-width: 320px;
+  }
+  .service-item-two {
+    text-align: center;
+    padding: 30px 20px;
+  }
+  .service-item-two i {
+    font-size: 65px;
+    position: inherit;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .service-item-two .content {
+    margin-top: 15px;
+    padding-left: 0;
+  }
+  .service-article .service-article-title {
+    margin-bottom: 20px;
+  }
+  .service-article .service-article-title ul li {
+    margin-right: 15px;
+    margin-bottom: 10px;
+  }
+  .service-article .service-article-content .blockquote {
+    margin-top: 30px;
+  }
+  .service-article .service-article-content .blockquote p {
+    font-size: 17px;
+    margin-left: 0;
+  }
+  /* Services Area CSS End */
+  .reservation-tab .tabs li a {
+    font-size: 15px;
+    padding: 8px 12px;
+  }
+  .reservation-widget-content {
+    padding: 25px 15px 0;
+  }
+  /* Ability Area CSS End */
+  .ability-content .ability-counter {
+    text-align: center;
+    padding: 20px 25px;
+  }
+  .ability-content .ability-counter h3 {
+    font-size: 35px;
+  }
+  .ability-content .ability-counter p {
+    font-size: 18px;
+  }
+  .ability-img {
+    margin-bottom: 30px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ability-img::before {
+    display: none;
+  }
+  .ability-img-2::before {
+    display: none;
+  }
+  /* Ability Area CSS End */
+  .restaurant-item .restaurant-img {
+    padding-right: 15px;
+  }
+  .restaurant-item .restaurant-content {
+    padding: 20px 20px 0;
+  }
+  /* Specialty Area CSS  */
+  .specialty-img::before {
+    display: none;
+  }
+  .specialty-list {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .specialty-list .specialty-list-card {
+    padding-left: 30px;
+    text-align: center;
+  }
+  .specialty-list .specialty-list-card i {
+    position: inherit;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Specialty Area CSS End */
+  .gallery-tab .tabs li {
+    margin: 5px;
+  }
+  .gallery-tab .tabs li a {
+    padding: 8px 14px;
+    font-size: 15px;
+  }
+  /* Room Area CSS */
+  .room-card .content .rating {
+    top: auto;
+    bottom: 20px;
+  }
+  .room-card-two .room-card-img {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 13px;
+  }
+  .room-card-two .room-card-content {
+    padding: 0 15px 0;
+  }
+  .room-card-two .room-card-content ul li {
+    margin-right: 7px;
+  }
+  .room-card-two .room-card-content ul li i {
+    margin-right: 3px;
+  }
+  .room-details-slider .owl-nav .owl-prev {
+    top: 41%;
+    -webkit-transform: translateY(-35%);
+            transform: translateY(-35%);
+  }
+  .room-details-slider .owl-nav .owl-next {
+    top: 41%;
+    -webkit-transform: translateY(-35%);
+            transform: translateY(-35%);
+  }
+  /* Room Area CSS End */
+  /* Testimonials Area CSS */
+  .testimonials-area {
+    margin-bottom: 70px;
+  }
+  .testimonials-area .owl-nav .owl-prev {
+    top: auto;
+    bottom: -40px;
+    left: 32%;
+  }
+  .testimonials-area .owl-nav .owl-next {
+    top: auto;
+    bottom: -40px;
+    right: 32%;
+  }
+  .testimonials-img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .testimonials-img .content {
+    left: 0;
+    right: 0;
+    width: 80%;
+    margin: 0 auto;
+    bottom: 30px;
+  }
+  .testimonials-content {
+    padding: 35px 25px;
+    position: relative;
+    left: 0;
+    right: 0;
+  }
+  .testimonials-content::before {
+    line-height: 1.3;
+  }
+  .testimonials-img-two {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .testimonials-img-two::before {
+    display: none;
+  }
+  .testimonials-slider-content {
+    margin-bottom: 30px;
+    margin-left: 0;
+  }
+  /* Testimonials Area CSS End */
+  .contact-content .section-title {
+    margin-bottom: 20px;
+  }
+  .contact-content .contact-img::before {
+    display: none;
+  }
+  .contact-form {
+    padding: 35px 20px;
+  }
+  .contact-item {
+    padding: 30px 15px;
+  }
+  .contact-item ul li {
+    padding-left: 60px;
+    margin-bottom: 15px;
+  }
+  .contact-item ul li i {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+  .contact-item ul li .content {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .contact-item ul li .content span {
+    font-size: 14px;
+  }
+  .user-all-form .contact-form {
+    padding: 30px 20px;
+  }
+  .user-all-form .contact-form .section-title {
+    margin-bottom: 20px;
+  }
+  .user-all-form .contact-form .forget {
+    float: none;
+  }
+  .faq-img-2 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .faq-img-3 {
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .faq-img-3::before {
+    display: none;
+  }
+  .book-img .book-shape {
+    display: none;
+  }
+  .book-content {
+    margin-left: 0;
+  }
+  .book-img-2 {
+    margin-top: 0;
+  }
+  .book-img-2::before {
+    display: none;
+  }
+  /* Team Area CSS */
+  .team-area {
+    margin-bottom: 70px;
+  }
+  .team-area .owl-nav .owl-prev {
+    top: auto;
+    bottom: -40px;
+    left: 32%;
+  }
+  .team-area .owl-nav .owl-next {
+    top: auto;
+    bottom: -40px;
+    right: 32%;
+  }
+  /* Team Area CSS End */
+  .blog-area .section-title {
+    margin-bottom: 15px;
+  }
+  .blog-card .blog-img {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+  }
+  .blog-item .content ul li {
+    font-size: 15px;
+    margin-right: 6px;
+  }
+  .blog-article .blog-article-title {
+    margin-bottom: 20px;
+  }
+  .blog-article .blog-article-title h2 {
+    font-size: 26px;
+  }
+  .blog-article .blog-article-title ul li {
+    margin-right: 15px;
+    margin-bottom: 10px;
+  }
+  .blog-article .article-content .blockquote {
+    margin-top: 30px;
+  }
+  .blog-article .article-content .blockquote p {
+    font-size: 17px;
+    margin-left: 0;
+  }
+  .blog-article .comments-wrap .title {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  .blog-article .comments-wrap ul li {
+    padding-left: 30px;
+  }
+  .blog-article .comments-wrap ul li img {
+    position: inherit;
+    left: 0;
+    top: 0;
+    margin-bottom: 15px;
+  }
+  .blog-article .comments-wrap ul li a {
+    position: inherit;
+    top: 0;
+    left: 0;
+    margin-top: 15px;
+  }
+  .blog-article .comments-form {
+    margin-bottom: 40px;
+  }
+  .blog-article .comments-form .contact-form h2 {
+    margin-bottom: 20px;
+  }
+  .side-bar-widget .widget-popular-post .item .info .title-text {
+    font-size: 16px;
+  }
+  /* Error Area */
+  .error-area .error-content {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .error-area .error-content h1 {
+    font-size: 120px;
+  }
+  .error-area .error-content h3 {
+    margin-top: 20px;
+    font-size: 30px;
+  }
+  .error-area .error-content p {
+    font-size: 15px;
+    margin-top: 10px;
+    padding: 0 15px;
+  }
+  /* Error Area End */
+  /* Coming Soon */
+  .coming-soon-area::before {
+    display: none;
+  }
+  .coming-soon-area .coming-soon-content {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .coming-soon-area .coming-soon-content h1 {
+    font-size: 30px;
+    line-height: 1.1;
+    margin-top: 0;
+  }
+  .coming-soon-area .coming-soon-content p {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  .coming-soon-area .coming-soon-content #timer {
+    margin-top: 10px;
+  }
+  .coming-soon-area .coming-soon-content #timer div {
+    font-size: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .coming-soon-area .coming-soon-content #timer div span {
+    font-size: 14px;
+    margin-top: -5px;
+  }
+  .coming-soon-area .coming-soon-content #timer div::before {
+    display: none;
+  }
+  .coming-soon-area .coming-soon-content .newsletter-form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .coming-soon-area .coming-soon-content .newsletter-form .input-newsletter {
+    height: 55px;
+    padding-left: 13px;
+    font-size: 15px;
+  }
+  .coming-soon-area .coming-soon-content .newsletter-form button {
+    position: relative;
+    font-size: 14px;
+    margin-top: 15px;
+    width: 100%;
+    height: 50px;
+  }
+  /* Coming Soon End */
+  .footer-widget h3 {
+    margin-top: 0;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .footer-widget.pl-5, .footer-widget.px-5 {
+    padding-left: 0 !important;
+  }
+  .text-align1 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .text-align2 {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .header-right ul li {
+    margin-right: 10px;
+  }
+  .about-area .container-fluid {
+    width: 540px;
+  }
+  .services-area .owl-nav .owl-prev {
+    left: 40.5%;
+  }
+  .services-area .owl-nav .owl-next {
+    right: 40.5%;
+  }
+  .services-item {
+    padding: 30px 25px;
+  }
+  .services-item h3 {
+    font-size: 22px;
+  }
+  .testimonials-area .owl-nav .owl-prev {
+    left: 40%;
+  }
+  .testimonials-area .owl-nav .owl-next {
+    right: 40%;
+  }
+  .team-area .owl-nav .owl-prev {
+    left: 40%;
+  }
+  .team-area .owl-nav .owl-next {
+    right: 40%;
+  }
+  .blog-item .content h3 {
+    max-width: 350px;
+  }
+  .blog-item .content ul li {
+    margin-right: 25px;
+  }
+  .user-all-form .contact-form {
+    padding: 30px 20px;
+  }
+  .user-all-form .contact-form .section-title {
+    margin-bottom: 20px;
+  }
+  .user-all-form .contact-form .forget {
+    float: none;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /* Default CSS */
+  body {
+    font-size: 14px;
+  }
+  .ptb-100 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .pt-100 {
+    padding-top: 50px;
+  }
+  .ptb-70 {
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+  .pb-100 {
+    padding-bottom: 50px;
+  }
+  .pt-70 {
+    padding-top: 30px;
+  }
+  .pb-70 {
+    padding-bottom: 20px;
+  }
+  .pt-45 {
+    padding-top: 30px;
+  }
+  .default-btn {
+    padding: 10px 30px;
+  }
+  .section-title span {
+    font-size: 14px;
+  }
+  .section-title h2 {
+    font-size: 26px;
+    margin-top: 0;
+  }
+  .section-title p {
+    padding-top: 5px;
+  }
+  h3 {
+    font-size: 21px;
+  }
+  .nav-item-btn {
+    display: inline-block;
+    text-align: center;
+  }
+  .nav-item-btn .nav-item-btn {
+    display: inline-block;
+    text-align: center;
+  }
+  .nav-item-btn .nav-item-btn .default-btn {
+    width: 100px !important;
+    margin: 0em 5% !important;
+    text-align: center !important;
+    margin-bottom: 10px;
+    float: none !important;
+    color: #ffffff !important;
+  }
+  /* Default CSS End */
+  .header-right ul li {
+    padding-left: 5px;
+    margin-right: 7px;
+  }
+  .header-right ul li::before {
+    display: none;
+  }
+  /* Navbar CSS */
+  .mobile-nav .logo img {
+    max-width: 120px;
+    height: 40px;
+    margin-top: -5px;
+  }
+  .mobile-nav .logo .logo-two {
+    display: none;
+  }
+  .nav-btn {
+    display: none;
+  }
+  .nav-item-btn {
+    display: inline-block;
+    text-align: center;
+  }
+  .nav-item-btn .default-btn {
+    width: 100px !important;
+    margin: 0em 5% !important;
+    text-align: center !important;
+    margin-bottom: 10px;
+    float: none !important;
+    color: #ffffff !important;
+  }
+  .other-option {
+    display: none;
+  }
+  .d-in-line {
+    display: none;
+  }
+  .side-nav-responsive {
+    display: block;
+  }
+  .side-nav-responsive .container {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .side-nav-responsive .container .container {
+    position: absolute;
+    top: 55px;
+    right: -20px;
+    max-width: 245px;
+    margin-left: auto;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    z-index: 2;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* Navbar CSS End */
+  /* Main Banner CSS */
+  .banner-area::before {
+    background-image: -webkit-gradient(linear, left top, right top, from(#ffffff), to(#ffffff4a));
+    background-image: linear-gradient(to right, #ffffff, #ffffff4a);
+  }
+  .banner-content {
+    padding: 140px 0 140px;
+    margin-left: auto;
+    text-align: center;
+  }
+  .banner-content h1 {
+    font-size: 35px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .banner-content p {
+    font-size: 16px;
+  }
+  .banner-area-two {
+    background-image: none;
+    padding-top: 120px;
+    padding-bottom: 80px;
+    background-color: #FEF4F2;
+  }
+  .banner-another {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .banner-another h1 {
+    font-size: 35px;
+  }
+  .banner-another p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .banner-another .banner-shape {
+    display: none;
+  }
+  .banner-img {
+    margin-top: 30px;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .banner-img::before {
+    display: none;
+  }
+  .banner-max {
+    max-width: 580px;
+    padding: 140px 0 85px;
+  }
+  /* Main Banner CSS End */
+  .banner-form {
+    padding: 20px 30px;
+  }
+  /* Inner Banner */
+  .inner-banner .inner-title {
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+  .inner-banner .inner-title h3 {
+    font-size: 26px;
+    margin-top: 0px;
+  }
+  .inner-banner .inner-title ul li {
+    font-size: 16px;
+  }
+  /* Inner Banner End */
+  /* About Area CSS */
+  .about-area .container-fluid {
+    width: 720px;
+  }
+  .about-img {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-top: 0;
+    z-index: inherit;
+  }
+  .about-img::before {
+    display: none;
+  }
+  .about-content {
+    margin-left: 0;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+  .about-img-2 {
+    max-width: 100%;
+    margin-right: auto;
+  }
+  /* About Area CSS End */
+  /* Ability Area CSS End */
+  .ability-content .section-title p {
+    max-width: 650px;
+  }
+  .ability-content .ability-counter {
+    text-align: center;
+    padding: 20px 25px;
+  }
+  .ability-content .ability-counter h3 {
+    font-size: 35px;
+  }
+  .ability-content .ability-counter p {
+    font-size: 18px;
+  }
+  .ability-img {
+    margin-bottom: 30px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ability-img::before {
+    display: none;
+  }
+  .ability-img-2::before {
+    display: none;
+  }
+  /* Ability Area CSS End */
+  .reservation-tab .tabs li a {
+    font-size: 15px;
+    padding: 8px 12px;
+  }
+  /* Services Area CSS */
+  .services-area {
+    margin-bottom: 70px;
+  }
+  .services-area .owl-nav .owl-prev {
+    top: auto;
+    bottom: -40px;
+    left: 41.5%;
+  }
+  .services-area .owl-nav .owl-next {
+    top: auto;
+    bottom: -40px;
+    right: 41.5%;
+  }
+  .services-item {
+    padding: 20px 20px;
+    text-align: center;
+  }
+  .services-item h3 {
+    font-size: 19px;
+    max-width: 320px;
+  }
+  .service-item-two {
+    text-align: center;
+    padding: 30px 20px;
+  }
+  .service-item-two i {
+    font-size: 65px;
+    position: inherit;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .service-item-two .content {
+    margin-top: 15px;
+    padding-left: 0;
+  }
+  /* Services Area CSS End */
+  /* Specialty Area CSS  */
+  .specialty-img::before {
+    display: none;
+  }
+  .specialty-list {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .specialty-list .specialty-list-card i {
+    top: 20px;
+  }
+  /* Specialty Area CSS End */
+  .gallery-tab .tabs li {
+    margin: 5px;
+  }
+  .gallery-tab .tabs li a {
+    padding: 8px 14px;
+    font-size: 15px;
+  }
+  /* Testimonials Area CSS */
+  .testimonials-area {
+    margin-bottom: 70px;
+  }
+  .testimonials-area .owl-nav .owl-prev {
+    top: auto;
+    bottom: -40px;
+    left: 41.5%;
+  }
+  .testimonials-area .owl-nav .owl-next {
+    top: auto;
+    bottom: -40px;
+    right: 41.4%;
+  }
+  .testimonials-img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .testimonials-img .content {
+    left: 0;
+    right: 0;
+    width: 80%;
+    margin: 0 auto;
+    bottom: 30px;
+  }
+  .testimonials-content {
+    padding: 50px 35px;
+    position: relative;
+    left: 0;
+    right: 0;
+  }
+  .testimonials-content::before {
+    line-height: 1.2;
+  }
+  .testimonials-img-two {
+    margin-left: 0;
+  }
+  .testimonials-img-two::before {
+    display: none;
+  }
+  .testimonials-slider-content {
+    margin-left: 10px;
+  }
+  /* Testimonials Area CSS End */
+  .contact-content .contact-img::before {
+    display: none;
+  }
+  .faq-content {
+    max-width: 100%;
+  }
+  .faq-img-2 {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .faq-img-3 {
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .faq-img-3::before {
+    display: none;
+  }
+  .book-img .book-shape {
+    display: none;
+  }
+  .book-content {
+    margin-left: 0;
+  }
+  .book-img-2 {
+    margin-top: 0;
+  }
+  .book-img-2::before {
+    display: none;
+  }
+  /* Team Area CSS */
+  .team-area {
+    margin-bottom: 70px;
+  }
+  .team-area .owl-nav .owl-prev {
+    top: auto;
+    bottom: -40px;
+    left: 41.5%;
+  }
+  .team-area .owl-nav .owl-next {
+    top: auto;
+    bottom: -40px;
+    right: 41.5%;
+  }
+  /* Team Area CSS End */
+  /* Error Area */
+  .error-area .error-content {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .error-area .error-content h1 {
+    font-size: 120px;
+  }
+  .error-area .error-content h3 {
+    margin-top: 20px;
+    font-size: 30px;
+  }
+  .error-area .error-content p {
+    font-size: 15px;
+    margin-top: 10px;
+    padding: 0 15px;
+  }
+  /* Error Area End */
+  /* Coming Soon */
+  .coming-soon-area::before {
+    width: 100%;
+  }
+  .coming-soon-area .coming-soon-content {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .coming-soon-area .coming-soon-content h1 {
+    font-size: 40px;
+    line-height: 1.1;
+    margin-top: 0;
+  }
+  .coming-soon-area .coming-soon-content p {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  .coming-soon-area .coming-soon-content #timer {
+    margin-top: 10px;
+  }
+  .coming-soon-area .coming-soon-content #timer div {
+    font-size: 35px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .coming-soon-area .coming-soon-content #timer div span {
+    font-size: 14px;
+    margin-top: -5px;
+  }
+  .coming-soon-area .coming-soon-content #timer div::before {
+    display: none;
+  }
+  .coming-soon-area .coming-soon-content .newsletter-form {
+    margin-top: 20px;
+  }
+  /* Coming Soon End */
+  .footer-widget.pl-5, .footer-widget.px-5 {
+    padding-left: 0 !important;
+  }
+  .copy-right-area .social-icon .social-link li {
+    margin-right: 2px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .section-title h2 {
+    font-size: 26px;
+  }
+  .nav-two {
+    width: 100%;
+  }
+  .banner-another {
+    max-width: 450px;
+  }
+  .banner-another .banner-shape {
+    top: -40px;
+    left: -35px;
+  }
+  .banner-max {
+    padding: 160px 0 160px;
+  }
+  .banner-img {
+    max-width: 445px;
+  }
+  .about-img {
+    max-width: 450px;
+  }
+  .about-img::before {
+    top: -30px;
+    left: -30px;
+    width: 70%;
+    height: 113%;
+  }
+  .about-content {
+    margin-left: 0;
+  }
+  .about-content .about-form {
+    padding: 25px 13px;
+  }
+  .room-card-two .room-card-img {
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+  .room-card-two .room-card-content {
+    padding: 0 7px 0;
+  }
+  .room-card-two .room-card-content p {
+    font-size: 15px;
+  }
+  .room-card-two .room-card-content .rating {
+    font-size: 15px;
+    top: 45px;
+    right: 20px;
+  }
+  .room-card-two .room-card-content ul li {
+    font-size: 14px;
+    margin-right: 5px;
+  }
+  .room-card-two .room-card-content ul li i {
+    margin-right: 3px;
+  }
+  .restaurant-item .restaurant-content h3 {
+    font-size: 19px;
+  }
+  .ability-img {
+    margin-left: 0;
+  }
+  .ability-img::before {
+    right: -30px;
+    height: 114%;
+  }
+  .services-item {
+    padding: 20px 15px;
+  }
+  .services-item h3 {
+    font-size: 19px;
+  }
+  .service-item-two .content h3 {
+    max-width: 270px;
+  }
+  .testimonials-img {
+    margin-left: 30px;
+  }
+  .testimonials-img .content {
+    left: -30px;
+  }
+  .book-img .book-shape {
+    top: 25px;
+    left: -25px;
+  }
+  .book-img .book-shape img {
+    height: 430px;
+  }
+  .book-img-2::before {
+    height: 113%;
+  }
+  .testimonials-content {
+    padding: 40px 30px;
+  }
+  .room-card .content .rating {
+    top: auto;
+    bottom: 20px;
+  }
+  .blog-card .blog-content h3 {
+    font-size: 21px;
+  }
+  .blog-item .content ul li {
+    margin-right: 5px;
+  }
+  .blog-item .content h3 {
+    font-size: 21px;
+  }
+  .side-bar-widget .widget-popular-post .item .info .title-text {
+    font-size: 16px;
+  }
+  .faq-img-3::before {
+    height: 113%;
+  }
+  .footer-widget .footer-list-contact li {
+    padding-left: 25px;
+  }
+}
+
+@media only screen and (min-width: 1350px) and (max-width: 1699px) {
+  .container {
+    max-width: 1320px !important;
+  }
+  .nav-two {
+    width: 1340px;
+  }
+  .banner-another .banner-shape {
+    left: -85px;
+  }
+  .services-area .owl-nav .owl-prev {
+    left: -25px;
+  }
+  .services-area .owl-nav .owl-next {
+    right: -25px;
+  }
+  .services-item {
+    padding: 30px 40px;
+  }
+  .specialty-img {
+    margin-left: 30px;
+  }
+  .specialty-img::before {
+    left: -30px;
+  }
+  .specialty-list .specialty-list-card {
+    padding-left: 140px;
+  }
+  .specialty-list .specialty-list-card i {
+    left: 40px;
+  }
+  .ability-img-2 {
+    margin-right: 30px;
+  }
+  .testimonials-area .owl-nav .owl-prev {
+    left: -25px;
+  }
+  .testimonials-area .owl-nav .owl-next {
+    right: -25px;
+  }
+  .testimonials-item {
+    padding: 30px 35px;
+  }
+  .team-area .owl-nav .owl-prev {
+    left: -25px;
+  }
+  .team-area .owl-nav .owl-next {
+    right: -25px;
+  }
+  .blog-card .blog-content {
+    padding: 0 30px 0;
+  }
+  .room-item .content {
+    padding: 20px 35px 30px;
+    position: relative;
+  }
+  .room-item .content .book-btn {
+    right: 30px;
+  }
+  .services-card {
+    padding: 30px 30px;
+  }
+  .ability-img {
+    margin-right: 70px;
+  }
+  .ability-img::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    right: -70px;
+    top: -30px;
+    width: 70%;
+    height: 112%;
+    background-color: #ffffff;
+    border-radius: 50px;
+  }
+  .book-img {
+    margin-left: 60px;
+  }
+  .book-img-2 {
+    margin-right: 60px;
+  }
+  .book-img-2::before {
+    right: -60px;
+  }
+  .book-content .section-title p {
+    max-width: 540px;
+  }
+  .room-card-two {
+    padding: 30px;
+  }
+  .faq-content {
+    max-width: 670px;
+  }
+  .blog-item .content {
+    padding: 30px 35px;
+  }
+  .contact-content .contact-img {
+    margin-left: 30px;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .container {
+    max-width: 1440px !important;
+  }
+  .nav-two {
+    width: 1470px;
+  }
+  .banner-another {
+    max-width: 640px;
+  }
+  .banner-another h1 {
+    font-size: 58px;
+  }
+  .banner-another p {
+    max-width: 600px;
+  }
+  .about-img {
+    max-width: 630px;
+  }
+  .about-content {
+    max-width: 635px;
+  }
+  .about-content .section-title p {
+    max-width: 555px;
+  }
+  .about-img-2 {
+    max-width: 675px;
+  }
+  .services-item {
+    padding: 30px 50px;
+  }
+  .reservation-content .section-title h2 {
+    max-width: 640px;
+  }
+  .reservation-content .section-title p {
+    max-width: 610px;
+  }
+  .faq-content {
+    max-width: 670px;
+  }
+  .testimonials-item {
+    padding: 30px 40px;
+  }
+  .testimonials-content {
+    padding: 70px 65px;
+  }
+  .blog-card {
+    padding: 30px;
+  }
+  .blog-card .blog-content {
+    padding: 0 35px 0;
+  }
+  .choose-card {
+    padding: 30px 55px;
+  }
+  .room-card-two {
+    padding: 30px;
+  }
+  .room-card-two .room-card-content {
+    padding: 0 48px 0;
+  }
+  .book-img-2::before {
+    height: 109%;
+  }
+  .service-item-two .content h3 {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .banner-another .banner-shape img {
+    height: 535px;
+  }
+  .book-img .book-shape img {
+    height: 475px;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */
