@@ -37,7 +37,9 @@
 
     <section class="checkout-area pb-70">
     <div class="container">
-        <form>
+        <form action="{{ route('profile.store') }}" method="post" enctype="multipart/form-data">
+            @csrf
+
             <div class="row">
                 <div class="col-lg-12 col-md-12">
                     <div class="billing-details">
@@ -63,7 +65,7 @@
         <div class="col-lg-6 col-md-6">
             <div class="form-group">
                 <label> Address <span class="required">*</span></label>
-                <input type="text" name="adress" class="form-control" value="{{ $profileData->adress }}">
+                <input type="text" name="address" class="form-control" value="{{ $profileData->address }}">
             </div>
         </div>
 
