@@ -8,7 +8,8 @@
         <div class="ps-3">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0 p-0">
-                    <button type="button" class="btn btn-outline-primary px-5 radius-30">Add Team </button>
+                   
+                    <a href="{{ route('add.team') }}" class="btn btn-outline-primary px-5 radius-30"> Add Team</a>
                 </ol>
             </nav>
         </div>
@@ -41,7 +42,7 @@
                             <td>{{ $item->facebook }}</td>
                             <td>
     <a href="" class="btn btn-warning px-3 radius-30"> Edit</a>
-    <a href="" class="btn btn-warning px-3 radius-30"> Delete</a>
+    <a href="" class="btn btn-danger px-3 radius-30"> Delete</a>
 
                             </td>
                         </tr>
