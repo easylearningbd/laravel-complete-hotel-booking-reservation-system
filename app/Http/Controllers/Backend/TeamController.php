@@ -122,7 +122,11 @@ class TeamController extends Controller
 
      }   // End Method 
 
+    //  ==================== Book Area All Methods =============
 
+    public function BookArea(){
+
+    }  // End Method 
 
 
 
