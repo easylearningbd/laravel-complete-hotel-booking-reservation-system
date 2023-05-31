@@ -41,7 +41,7 @@
                             <td>{{ $item->postion }}</td>
                             <td>{{ $item->facebook }}</td>
                             <td>
-    <a href="" class="btn btn-warning px-3 radius-30"> Edit</a>
+    <a href="{{ route('edit.team',$item->id) }}" class="btn btn-warning px-3 radius-30"> Edit</a>
     <a href="" class="btn btn-danger px-3 radius-30"> Delete</a>
 
                             </td>
