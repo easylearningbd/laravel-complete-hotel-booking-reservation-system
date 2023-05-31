@@ -104,7 +104,23 @@ class TeamController extends Controller
 
     }// End Method 
 
+     public function DeleteTeam($id){
 
+        $item = Team::findOrFail($id);
+        $img = $item->image;
+        unlink($img);
+
+        Team::findOrFail($id)->delete();
+
+        $notification = array(
+            'message' => 'Team Image Deleted Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification);
+
+
+     }   // End Method 
 
 
 
