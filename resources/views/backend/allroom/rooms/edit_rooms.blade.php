@@ -41,76 +41,120 @@
 						
                     <div class="card">
                         <div class="card-body p-4">
-                            <h5 class="mb-4">Vertical Form</h5>
-                            <form class="row g-3">
-                                <div class="col-md-6">
-                                    <label for="input1" class="form-label">First Name</label>
-                                    <input type="text" class="form-control" id="input1" placeholder="First Name">
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="input2" class="form-label">Last Name</label>
-                                    <input type="text" class="form-control" id="input2" placeholder="Last Name">
-                                </div>
-                                <div class="col-md-12">
-                                    <label for="input3" class="form-label">Phone</label>
-                                    <input type="text" class="form-control" id="input3" placeholder="Phone">
-                                </div>
-                                <div class="col-md-12">
-                                    <label for="input4" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="input4" placeholder="Email">
-                                </div>
-                                <div class="col-md-12">
-                                    <label for="input5" class="form-label">Password</label>
-                                    <input type="password" class="form-control" id="input5" placeholder="Password">
-                                </div>
-                                <div class="col-md-12">
-                                    <label for="input6" class="form-label">DOB</label>
-                                    <input type="date" class="form-control" id="input6" placeholder="Date of Birth">
-                                </div>
-                                <div class="col-md-12">
-                                    <label for="input7" class="form-label">Country</label>
-                                    <select id="input7" class="form-select">
-                                        <option selected="">Choose...</option>
-                                        <option>One</option>
-                                        <option>Two</option>
-                                        <option>Three</option>
-                                    </select>
-                                </div>
-                                
-                                <div class="col-md-6">
-                                    <label for="input8" class="form-label">City</label>
-                                    <input type="text" class="form-control" id="input8" placeholder="City">
-                                </div>
-                                <div class="col-md-4">
-                                    <label for="input9" class="form-label">State</label>
-                                    <select id="input9" class="form-select">
-                                        <option selected="">Choose...</option>
-                                        <option>One</option>
-                                        <option>Two</option>
-                                        <option>Three</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-2">
-                                    <label for="input10" class="form-label">Zip</label>
-                                    <input type="text" class="form-control" id="input10" placeholder="Zip">
-                                </div>
-                                <div class="col-md-12">
-                                    <label for="input11" class="form-label">Address</label>
-                                    <textarea class="form-control" id="input11" placeholder="Address ..." rows="3"></textarea>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="input12">
-                                        <label class="form-check-label" for="input12">Check me out</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="d-md-flex d-grid align-items-center gap-3">
-                                        <button type="button" class="btn btn-primary px-4">Submit</button>
-                                        <button type="button" class="btn btn-light px-4">Reset</button>
-                                    </div>
-                                </div>
-                            </form>
+                            <h5 class="mb-4">Update Room </h5>
+    <form class="row g-3">
+        <div class="col-md-4">
+            <label for="input1" class="form-label">Room Type Name </label>
+            <input type="text" name="roomtype_id" class="form-control" id="input1" value="{{ $editData['type']['name'] }}" >
+        </div>
+        <div class="col-md-4">
+            <label for="input2" class="form-label">Total Adult</label>
+            <input type="text" name="total_adult" class="form-control" id="input2"  value="{{ $editData->total_adult }}">
+        </div>
+
+        <div class="col-md-4">
+            <label for="input2" class="form-label">Total Child </label>
+            <input type="text" name="total_child" class="form-control" id="input2" value="{{ $editData->total_child }}">
+        </div>
+
+
+        <div class="col-md-6">
+            <label for="input3" class="form-label">Main Image </label>
+            <input type="file" name="image" class="form-control" id="input3" placeholder="Phone">
+        </div>
+        <div class="col-md-6">
+            <label for="input4" class="form-label">Gallery Image </label>
+            <input type="file" name="multi_img[]" class="form-control" id="multiImg" accept="image/jpeg, image/jpg, image/gif, image/png" >
+        </div>
+
+
+        <div class="col-md-4">
+            <label for="input1" class="form-label">Room Price  </label>
+            <input type="text" name="price" class="form-control" id="input1" value="{{ $editData->price }}" >
+        </div>
+        <div class="col-md-4">
+            <label for="input2" class="form-label">Discount ( % )</label>
+            <input type="text" name="discount" class="form-control" id="input2"  value="{{ $editData->discount }}">
+        </div>
+
+        <div class="col-md-4">
+            <label for="input2" class="form-label">Room Capacity </label>
+            <input type="text" name="room_capacity" class="form-control" id="input2" value="{{ $editData->room_capacity }}">
+        </div>
+
+        <div class="col-md-6">
+            <label for="input7" class="form-label">Room View </label>
+            <select name="view" id="input7" class="form-select">
+                <option selected="">Choose...</option>
+                <option value="Sea View">Sea View </option>
+                <option value="Hill View">Hill View </option>
+               
+            </select>
+        </div>
+
+        <div class="col-md-6">
+            <label for="input7" class="form-label">Bed Style</label>
+            <select name="bed_style" id="input7" class="form-select">
+                <option selected="">Choose...</option>
+                <option value="Queen Bed"> Queen Bed </option>
+                <option value="Twin Bed">Twin Bed </option>
+                <option value="King Bed">King Bed </option>
+            </select>
+        </div>
+
+
+        <div class="col-md-12">
+            <label for="input5" class="form-label">Password</label>
+            <input type="password" class="form-control" id="input5" placeholder="Password">
+        </div>
+        <div class="col-md-12">
+            <label for="input6" class="form-label">DOB</label>
+            <input type="date" class="form-control" id="input6" placeholder="Date of Birth">
+        </div>
+        <div class="col-md-12">
+            <label for="input7" class="form-label">Country</label>
+            <select id="input7" class="form-select">
+                <option selected="">Choose...</option>
+                <option>One</option>
+                <option>Two</option>
+                <option>Three</option>
+            </select>
+        </div>
+        
+        <div class="col-md-6">
+            <label for="input8" class="form-label">City</label>
+            <input type="text" class="form-control" id="input8" placeholder="City">
+        </div>
+        <div class="col-md-4">
+            <label for="input9" class="form-label">State</label>
+            <select id="input9" class="form-select">
+                <option selected="">Choose...</option>
+                <option>One</option>
+                <option>Two</option>
+                <option>Three</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label for="input10" class="form-label">Zip</label>
+            <input type="text" class="form-control" id="input10" placeholder="Zip">
+        </div>
+        <div class="col-md-12">
+            <label for="input11" class="form-label">Address</label>
+            <textarea class="form-control" id="input11" placeholder="Address ..." rows="3"></textarea>
+        </div>
+        <div class="col-md-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="input12">
+                <label class="form-check-label" for="input12">Check me out</label>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="d-md-flex d-grid align-items-center gap-3">
+                <button type="button" class="btn btn-primary px-4">Submit</button>
+                <button type="button" class="btn btn-light px-4">Reset</button>
+            </div>
+        </div>
+    </form>
                         </div>
                     </div>
  
