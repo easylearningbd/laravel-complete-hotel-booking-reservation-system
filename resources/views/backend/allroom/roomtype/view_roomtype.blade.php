@@ -9,7 +9,7 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0 p-0">
                    
-                    <a href="{{ route('add.team') }}" class="btn btn-outline-primary px-5 radius-30"> Add Team Type </a>
+                    <a href="{{ route('add.room.type') }}" class="btn btn-outline-primary px-5 radius-30"> Add Room Type </a>
                 </ol>
             </nav>
         </div>

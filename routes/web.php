@@ -76,7 +76,9 @@ Route::controller(TeamController::class)->group(function(){
  /// RoomType All Route 
  Route::controller(RoomTypeController::class)->group(function(){
 
-    Route::get('/room/type/list', 'RoomTypeList')->name('room.type.list'); 
+    Route::get('/room/type/list', 'RoomTypeList')->name('room.type.list');
+    Route::get('/add/room/type', 'AddRoomType')->name('add.room.type');
+    Route::post('/room/type/store', 'RoomTypeStore')->name('room.type.store'); 
       
 });
 
