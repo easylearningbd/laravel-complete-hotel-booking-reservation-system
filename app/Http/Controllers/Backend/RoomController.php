@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Room;
 use App\Models\Facility;
+use App\Models\MultiImage;
 use Intervention\Image\Facades\Image;
 use Carbon\Carbon;
 
@@ -68,8 +69,42 @@ class RoomController extends Controller
             } // end for
         } // end else 
 
+        //// Update Multi Image 
+
+        if($room->save()){
+            $files = $request->multi_img;
+            if(!empty($files)){
+                $subimage = MultiImage::where('rooms_id',$id)->get()->toArray();
+                MultiImage::where('rooms_id',$id)->delete();
+ 
+            }
+            if(!empty($files)){
+                foreach($files as $file){
+                    $imgName = date('YmdHi').$file->getClientOriginalName();
+                    $file->move('upload/roomimg/multi_img/',$imgName);
+                    $subimage['multi_img'] = $imgName;
+
+                    $subimage = new MultiImage();
+                    $subimage->rooms_id = $room->id;
+                    $subimage->multi_img = $imgName;
+                    $subimage->save();
+                }
+
+            }
+        } // end if
+
+        $notification = array(
+            'message' => 'Room Updated Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification); 
 
     }//End Method 
+
+
+
+    
 
 
 }
