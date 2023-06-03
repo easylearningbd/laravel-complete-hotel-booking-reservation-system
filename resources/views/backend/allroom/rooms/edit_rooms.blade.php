@@ -79,8 +79,8 @@
 
             <img src="{{ (!empty($item->multi_img)) ? url('upload/roomimg/multi_img/'.$item->multi_img) : url('upload/no_image.jpg') }}" alt="Admin" class="bg-primary" width="60"> 
 
-              <a href=""><i class="lni lni-close"></i> </a>  
-              
+              <a href="{{ route('multi.image.delete',$item->id) }}"><i class="lni lni-close"></i> </a>  
+
             @endforeach
 
 
