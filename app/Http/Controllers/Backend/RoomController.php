@@ -46,6 +46,29 @@ class RoomController extends Controller
 
         $room->save();
 
+        //// Update for Facility Table 
+
+        if($request->facility_name == NULL){
+
+            $notification = array(
+                'message' => 'Sorry! Not Any Basic Facility Select',
+                'alert-type' => 'error'
+            );
+    
+            return redirect()->back()->with($notification);
+
+        } else{
+            Facility::where('rooms_id',$id)->delete();
+            $facilities = Count($request->facility_name);
+            for($i=0; $i < $facilities; $i++ ){
+                $fcount = new Facility();
+                $fcount->rooms_id = $room->id;
+                $fcount->facility_name = $request->facility_name[$i];
+                $fcount->save();
+            } // end for
+        } // end else 
+
+
     }//End Method 
 
 
