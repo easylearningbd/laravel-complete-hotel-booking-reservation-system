@@ -88,6 +88,8 @@ Route::controller(TeamController::class)->group(function(){
     Route::get('/edit/room/{id}', 'EditRoom')->name('edit.room');
     Route::post('/update/room/{id}', 'UpdateRoom')->name('update.room');
     Route::get('/multi/image/delete/{id}', 'MultiImageDelete')->name('multi.image.delete');
+
+    Route::post('/store/room/no/{id}', 'StoreRoomNumber')->name('store.room.no');
       
 });
 
