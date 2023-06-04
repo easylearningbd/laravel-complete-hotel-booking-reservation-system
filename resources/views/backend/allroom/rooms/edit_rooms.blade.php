@@ -301,16 +301,19 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                     
-                    <td>Mark</td>
-                    <td>Otto</td>
+          
+                @foreach ($allroomNo as $item) 
+               
+                <tr> 
+                    <td>{{ $item->room_no }}</td>
+                    <td>{{ $item->status }}</td>
                     <td>
     <a href=" " class="btn btn-warning px-3 radius-30"> Edit</a>
     <a href=" " class="btn btn-danger px-3 radius-30" id="delete"> Delete</a>  
 
                     </td>
                 </tr>
+                @endforeach
                 
             </tbody>
         </table>
