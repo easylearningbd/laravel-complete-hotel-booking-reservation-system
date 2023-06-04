@@ -157,10 +157,42 @@ class RoomController extends Controller
 
 
 
+    public function EditRoomNumber($id){
+
+        $editroomno = RoomNumber::find($id);
+        return view('backend.allroom.rooms.edit_room_no',compact('editroomno'));
+
+    }//End Method 
+
+    public function UpdateRoomNumber(Request $request, $id){
+
+        $data = RoomNumber::find($id);
+        $data->room_no = $request->room_no;
+        $data->status = $request->status;
+        $data->save();
+
+       $notification = array(
+            'message' => 'Room Number Updated Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('room.type.list')->with($notification); 
+
+    }//End Method 
 
 
+    public function DeleteRoomNumber($id){
 
+        RoomNumber::find($id)->delete();
 
+        $notification = array(
+            'message' => 'Room Number Deleted Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('room.type.list')->with($notification); 
+
+    }//End Method
 
 
 }
