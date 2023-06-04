@@ -257,7 +257,7 @@
             <div class="tab-pane fade" id="primaryprofile" role="tabpanel">
                  <div class="card">
                     <div class="card-body">
-                        <a class="card-title btn btn-primary float-right" >
+    <a class="card-title btn btn-primary float-right" onclick="addRoomNo()" id="addRoomNo" >
                             <i class="lni lni-plus">Add New</i>
                         </a>
         <div class="roomnoHide" id="roomnoHide">
@@ -283,14 +283,40 @@
                     
                     <button type="submit" class="btn btn-success" style="margin-top: 28px;">Save</button>
                     
-                </div>
-
-
-            </div>
-
-            </form>
-
+                </div> 
+            </div> 
+            </form> 
         </div>
+
+
+        <table class="table mb-0 table-striped" id="roomview">
+            <thead>
+                <tr>
+                    <th scope="col">Room Number</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th> 
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                     
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>
+    <a href=" " class="btn btn-warning px-3 radius-30"> Edit</a>
+    <a href=" " class="btn btn-danger px-3 radius-30" id="delete"> Delete</a>  
+
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+
+
+
+
+
+
 
 
 
@@ -416,6 +442,21 @@
     });
  </script>
  <!--========== End of Basic Plan Facilities ==============-->
+
+  <!--========== Start Room Number Add ==============-->
+    <script>
+        $('#roomnoHide').hide();
+        $('#roomview').show();
+
+        function addRoomNo(){
+            $('#roomnoHide').show();
+            $('#roomview').hide();
+            $('#addRoomNo').hide();
+        }
+
+    </script>
+
+   <!--========== End Room Number Add ==============-->
 
 
 @endsection
