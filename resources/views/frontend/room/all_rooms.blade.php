@@ -30,7 +30,7 @@
            @foreach ($rooms as $item)
             <div class="col-lg-4 col-md-6">
                 <div class="room-card">
-                    <a href="room-details.html">
+                    <a href="{{ url('room/details/'.$item->id) }}">
                         <img src="{{ asset( 'upload/roomimg/'.$item->image ) }}" alt="Images" style="width: 550px; height:300px;">
                     </a>
                     <div class="content">
