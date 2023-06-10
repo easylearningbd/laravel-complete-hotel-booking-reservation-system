@@ -18,6 +18,12 @@ class FrontendRoomController extends Controller
     } // End Method 
 
 
+    public function RoomDetailsPage($id){
+
+        $roomdetails = Room::find($id);
+        return view('frontend.room.room_details',compact('roomdetails'));
+
+    } // End Method 
 
 
 }
