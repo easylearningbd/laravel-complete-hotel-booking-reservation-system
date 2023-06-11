@@ -41,7 +41,8 @@
 
 
 
-
+            @if ($av_room > 0 && old('persion') <= $item->total_adult)
+                
             <div class="col-lg-4 col-md-6">
                 <div class="room-card">
                     <a href="{{ url('room/details/'.$item->id) }}">
@@ -63,7 +64,17 @@
                     </div>
                 </div>
             </div> 
+
+            @else
+            <?php array_push($empty_array, $item->id) ?>
+
+            @endif 
            @endforeach
+
+           @if (count($rooms) == count($empty_array))
+           <p class="text-center text-danger">Sorry No Data Found</p>
+               
+           @endif
 
         
         </div>
