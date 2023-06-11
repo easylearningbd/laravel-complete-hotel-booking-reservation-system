@@ -248,6 +248,38 @@
     // Datetimepicker
     $('#datetimepicker-check').datepicker();
 
+    $('.dt_picker').datepicker({
+        dateFormat: 'yy-mm-dd',
+        autoclose: true,
+        minDate: 0
+    });
+
+
+    $("#startdate").datepicker({
+        todayBtn:  1,
+        startDate: new Date(),
+        format: 'yyyy-mm-dd' ,
+        autoclose: true,
+        yearSelect: function(current) {
+            return [current - 10, current + 10];
+        },
+    }).on('changeDate', function (selected) {
+        var minDate = new Date(selected.date.valueOf());
+        minDate.setDate(minDate.getDate() + 1);
+
+        $('#enddate').datepicker('setStartDate', minDate);
+        $('#enddate').val('');
+    });
+
+    $("#enddate").datepicker({
+        format: 'yyyy-mm-dd',
+        autoclose: true,
+    }).on('changeDate', function (selected) {
+        console.log('ok')
+    });
+
+
+
     // WOW JS
     new WOW().init();
 
