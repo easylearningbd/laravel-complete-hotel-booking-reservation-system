@@ -63,15 +63,44 @@
         <div class="col-lg-12">
             <div class="form-group">
                 <label>Numbers of Rooms</label>
-                <select class="form-control">
-                    <option>01</option>
-                    <option>02</option>
-                    <option>03</option>
-                    <option>04</option>
-                    <option>05</option>
+                <select class="form-control" name="number_of_rooms" id="select_room">
+                    @for ($i = 1; $i <= 5; $i++)  
+                    <option value="0{{ $i }}">0{{ $i }}</option>
+                    @endfor
+                    
                 </select>	
             </div>
         </div>
+
+
+        <div class="col-lg-12">
+            <table class="table">
+                
+                <tbody>
+                  <tr> 
+                    <td><p> SubTotal</p></td>
+                    <td style="text-align: right" >34</td> 
+                  </tr>
+
+                  <tr> 
+                    <td><p> Discount</p></td>
+                    <td style="text-align: right" >34</td> 
+                  </tr>
+
+                  <tr> 
+                    <td><p> Total</p></td>
+                    <td style="text-align: right" >34</td> 
+                  </tr>
+                   
+                </tbody>
+              </table>
+
+        </div>
+
+
+
+
+
 
         <div class="col-lg-12 col-md-12">
             <button type="submit" class="default-btn btn-bg-three border-radius-5">
