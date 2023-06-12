@@ -45,12 +45,12 @@
                 
             <div class="col-lg-4 col-md-6">
                 <div class="room-card">
-                    <a href="{{ route('search_room_details',$item->id.'&check_in='.old(check_in).'&check_out='.old('check_out').'&persion='.old('persion'))}}">
+                    <a href="{{ route('search_room_details',$item->id.'?check_in='.old('check_in').'&check_out='.old('check_out').'&persion='.old('persion'))}}">
                         <img src="{{ asset( 'upload/roomimg/'.$item->image ) }}" alt="Images" style="width: 550px; height:300px;">
                     </a>
                     <div class="content">
                         <h6>
-  <a href="{{ route('search_room_details',$item->id.'&check_in='.old(check_in).'&check_out='.old('check_out').'&persion='.old('persion'))}}">{{ $item['type']['name'] }}</a></h6>
+  <a href="{{ route('search_room_details',$item->id.'?check_in='.old('check_in').'&check_out='.old('check_out').'&persion='.old('persion'))}}">{{ $item['type']['name'] }}</a></h6>
                         <ul>
                             <li class="text-color">${{ $item->price }}</li>
                             <li class="text-color">Per Night</li>
