@@ -110,6 +110,8 @@ Route::controller(TeamController::class)->group(function(){
     Route::get('/room/details/{id}', 'RoomDetailsPage');
     Route::get('/bookings/', 'BookingSeach')->name('booking.search');
     Route::get('/search/room/details/{id}', 'SearchRoomDetails')->name('search_room_details');
+
+    
     
       
 });
