@@ -106,7 +106,9 @@
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
+   <p>Session Value : {{ json_encode(session('book_date')) }}</p>
 
+   
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-check">
                                     <input type="checkbox" class="form-check-input" id="create-an-account">
@@ -185,7 +187,7 @@
                                 <label for="cash-on-delivery">Cash On Delivery</label>
                             </p>
                         </div>
-
+ 
                         <a href="#" class="order-btn three">
                             Place to Order
                         </a>

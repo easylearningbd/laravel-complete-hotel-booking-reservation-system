@@ -123,6 +123,7 @@ Route::middleware(['auth'])->group(function(){
  Route::controller(BookingController::class)->group(function(){
 
     Route::get('/checkout/', 'Checkout')->name('checkout');
+    Route::post('/booking/store/', 'BookingStore')->name('user_booking_store');
      
  
 });
