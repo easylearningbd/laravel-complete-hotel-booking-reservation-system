@@ -74,7 +74,31 @@ class BookingController extends Controller
 
     }// End Method 
 
+    public function CheckoutStore(Request $request){
 
+        $this->validate($request,[
+            'name' => 'required',
+            'email' => 'required',
+            'country' => 'required',
+            'phone' => 'required',
+            'address' => 'required',
+            'state' => 'required',
+            'zip_code' => 'required',
+            'payment_method' => 'required', 
+        ]);
+
+           $book_data = Session::get('book_date'); 
+           $toDate = Carbon::parse($book_data['check_in']);
+           $fromDate = Carbon::parse($book_data['check_out']);
+           $total_nights = $toDate->diffInDays($fromDate);
+           
+           $room = Room::find($book_data['room_id']);
+           $subtotal = $room->price * $total_nights * $book_data['number_of_rooms'] ;
+           $discount = ($room->discount/100)*$subtotal;
+           $total_price = $subtotal-$discount;
+           $code = rand(000000000,999999999);
+
+    }// End Method 
 
 
 
