@@ -98,7 +98,7 @@
         </div>
  
 
-    <p>Session Value : {{ json_encode(session('book_date')) }}</p>  
+    {{-- <p>Session Value : {{ json_encode(session('book_date')) }}</p>   --}}
  
                         
                         </div>
