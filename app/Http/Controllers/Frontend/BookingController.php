@@ -14,6 +14,7 @@ use App\Models\MultiImage;
 use App\Models\Facility;
 use App\Models\RoomBookedDate;
 use App\Models\Booking;
+use Illuminate\Support\Facades\Auth;
 
 class BookingController extends Controller
 {
@@ -97,6 +98,42 @@ class BookingController extends Controller
            $discount = ($room->discount/100)*$subtotal;
            $total_price = $subtotal-$discount;
            $code = rand(000000000,999999999);
+
+           $data = new Booking();
+           $data->rooms_id = $room->id;
+           $data->user_id = Auth::user()->id;
+           $data->check_in = date('Y-m-d',strtotime($book_data['check_in']));
+           $data->check_out = date('Y-m-d',strtotime($book_data['check_out']));
+           $data->persion = $book_data['persion'];
+           $data->number_of_rooms = $book_data['number_of_rooms'];
+           $data->total_night = $total_nights;
+
+           $data->actual_price = $room->price;
+           $data->subtotal = $subtotal;
+           $data->discount = $discount;
+           $data->total_price = $total_price;
+           $data->payment_method = $request->payment_method;
+           $data->transation_id = '';
+           $data->payment_status = 0;
+
+           $data->name = $request->name;
+           $data->email = $request->email;
+           $data->phone = $request->phone;
+           $data->country = $request->country;
+           $data->state = $request->state;
+           $data->zip_code = $request->zip_code;
+           $data->address = $request->address;
+
+           $data->code = $code;
+           $data->status = 0;
+           $data->created_at = Carbon::now();
+           $data->save();
+
+
+
+
+
+
 
     }// End Method 
 
