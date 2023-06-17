@@ -15,6 +15,7 @@ use App\Models\Facility;
 use App\Models\RoomBookedDate;
 use App\Models\Booking;
 use Illuminate\Support\Facades\Auth;
+use Stripe;
 
 class BookingController extends Controller
 {
@@ -98,6 +99,34 @@ class BookingController extends Controller
            $discount = ($room->discount/100)*$subtotal;
            $total_price = $subtotal-$discount;
            $code = rand(000000000,999999999);
+
+         if ($request->payment_method == 'Stripe') {
+            Stripe\Stripe::setApiKey(env('STRIPE_KEY'));
+            $s_pay = Stripe\Charge::create ([
+                "amount" => $total_price * 100,
+                "currency" => "usd",
+                "source" => $request->stripeToken,
+                "description" => "Payment For Booking. Booking No ".$code,
+
+            ]);
+
+            if ($s_pay['status'] == 'succeeded') {
+                $payment_status = 1;
+                $transation_id = $s_pay->id;
+            }else{
+
+                $notification = array(
+                    'message' => 'Sorry Payment Field',
+                    'alert-type' => 'error'
+                ); 
+                return redirect('/')->with($notification);  
+
+            }
+
+         } else{
+            $payment_status = 0;
+            $transation_id = '';
+         } 
 
            $data = new Booking();
            $data->rooms_id = $room->id;
