@@ -78,6 +78,7 @@ class BookingController extends Controller
 
     public function CheckoutStore(Request $request){
 
+        // dd(env('STRIPE_SECRET'));
         $this->validate($request,[
             'name' => 'required',
             'email' => 'required',
@@ -101,7 +102,7 @@ class BookingController extends Controller
            $code = rand(000000000,999999999);
 
          if ($request->payment_method == 'Stripe') {
-            Stripe\Stripe::setApiKey(env('STRIPE_KEY'));
+            Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
             $s_pay = Stripe\Charge::create ([
                 "amount" => $total_price * 100,
                 "currency" => "usd",
