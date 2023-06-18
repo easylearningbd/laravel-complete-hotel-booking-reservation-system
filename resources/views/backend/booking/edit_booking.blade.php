@@ -130,10 +130,64 @@
                             <td>${{ $editData->actual_price *  $editData->number_of_rooms }}</td>
 
                         </tr>
-                    </tbody>
-
+                    </tbody> 
                 </table>
-                </div>  
+                <div class="col-md-6" style="float: right">
+                    <style>
+                        .test_table td{text-align: right;}
+                    </style>
+                    <table class="table test_table" style="float: right" border="none">
+                        <tr>
+                            <td>Subtotal</td>
+                            <td>${{ $editData->subtotal }}</td>
+                        </tr>
+                        <tr>
+                            <td>Discount</td>
+                            <td>${{ $editData->discount }}</td>
+                        </tr>
+                        <tr>
+                            <td>Grand Total</td>
+                            <td>${{ $editData->total_price }}</td>
+                        </tr>
+                    </table>
+
+                </div>
+ 
+
+
+                </div> 
+                 {{-- // end table responsive --}}
+
+                 <form action="">
+
+                    <div class="row" style="margin-top: 40px;">
+                        <div class="col-md-5">
+                            <label for="">Payment Status</label>
+        <select name="payment_status" id="input7" class="form-select">
+            <option selected="">Select Status..</option>
+            <option value="0" {{ $editData->payment_status == 0 ? 'selected':''}}> Pending </option>
+            <option value="1" {{ $editData->payment_status == 1?'selected':''}}>Complete </option> 
+        </select>
+                  </div>
+
+
+                  <div class="col-md-5">
+                    <label for="">Booking Status</label>
+<select name="status" id="input7" class="form-select">
+    <option selected="">Select Status..</option>
+    <option value="0" {{ $editData->status == 0 ? 'selected':''}}> Pending </option>
+    <option value="1" {{ $editData->status == 1 ?'selected':''}}>Complete </option> 
+</select>
+          </div>
+
+          <div class="col-md-12" style="margin-top: 20px;">
+            <button type="submit" class="btn btn-primary">Update</button> 
+          </div>
+
+                    </div>
+
+
+                 </form> 
                 
                
             </div>  
