@@ -100,6 +100,17 @@ Route::controller(TeamController::class)->group(function(){
 });
 
 
+
+ /// Admin Booking All Route 
+ Route::controller(BookingController::class)->group(function(){
+
+    Route::get('/booking/list', 'BookingList')->name('booking.list');
+    
+      
+});
+
+
+
 }); // End Admin Group Middleware 
 
 
