@@ -276,5 +276,17 @@ class BookingController extends Controller
      } // End Method 
 
 
+     public function AssignRoomStore($booking_id,$room_number_id){
+
+        $booking = Booking::find($booking_id);
+        $check_data = BookingRoomList::where('booking_id',$booking_id)->count();
+
+        if ($check_data < $booking->number_of_rooms) {
+            # code...
+        }
+
+     }// End Method 
+
+
 }
  
