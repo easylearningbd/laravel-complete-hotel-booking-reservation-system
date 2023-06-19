@@ -250,8 +250,13 @@ class BookingController extends Controller
             'alert-type' => 'success'
         ); 
         return redirect()->back()->with($notification);   
-        
+
      }  // End Method 
+
+
+     public function AssignRoom(){
+
+     } // End Method 
 
 
 }
