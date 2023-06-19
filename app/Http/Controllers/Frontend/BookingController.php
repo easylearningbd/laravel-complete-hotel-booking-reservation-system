@@ -16,6 +16,8 @@ use App\Models\RoomBookedDate;
 use App\Models\Booking;
 use Illuminate\Support\Facades\Auth;
 use Stripe;
+use App\Models\BookingRoomList;
+use App\Models\RoomNumber;
 
 class BookingController extends Controller
 {
@@ -254,7 +256,22 @@ class BookingController extends Controller
      }  // End Method 
 
 
-     public function AssignRoom(){
+     public function AssignRoom($booking_id){
+
+        $booking = Booking::find($booking_id);
+
+        $booking_date_array = RoomBookedDate::where('booking_id',$booking_id)->pluck('book_date')->toArray();
+
+        $check_date_booking_ids = RoomBookedDate::whereIn('book_date',$booking_date_array)->where('room_id',$booking->rooms_id)->distinct()->pluck('booking_id')->toArray();
+        
+        $booking_ids = Booking::whereIn('id',$check_date_booking_ids)->pluck('id')->toArray();
+
+        $assign_room_ids = BookingRoomList::whereIn('booking_id',$booking_ids)->pluck('room_number_id')->toArray();
+
+        $room_numbers = RoomNumber::where('rooms_id',$booking->rooms_id)->whereNotIn('id',$assign_room_ids)->where('status','Active')->get();
+
+        return view('backend.booking.assign_room',compact('booking','room_numbers'));
+        
 
      } // End Method 
 
