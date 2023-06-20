@@ -176,9 +176,12 @@
                 <a href="{{ route('assign_room_delete',$assign_room->id) }}" id="delete">Delete</a>
             </td>
         </tr>
-        @endforeach
-
+        @endforeach 
     </table>
+    @else
+    <div class="alert alert-danger text-center">
+        Not Found Assign Room
+    </div>
     @endif
 
 
