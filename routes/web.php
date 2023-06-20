@@ -9,6 +9,7 @@ use App\Http\Controllers\Backend\RoomTypeController;
 use App\Http\Controllers\Backend\RoomController;
 use App\Http\Controllers\Frontend\FrontendRoomController;
 use App\Http\Controllers\Frontend\BookingController;
+use App\Http\Controllers\Backend\RoomListController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -110,6 +111,14 @@ Route::controller(TeamController::class)->group(function(){
       
 });
 
+
+ /// Admin Room List All Route 
+ Route::controller(RoomListController::class)->group(function(){
+
+    Route::get('/view/room/list', 'ViewRoomList')->name('view.room.list'); 
+    
+      
+});
 
 
 }); // End Admin Group Middleware 
