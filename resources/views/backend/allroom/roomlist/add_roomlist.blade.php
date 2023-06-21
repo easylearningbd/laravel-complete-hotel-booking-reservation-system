@@ -28,7 +28,9 @@
             <div class="card-body p-4">
                  
                 
-    <form class="row g-3">
+    <form method="POST" action="{{ route('store.roomlist') }}" class="row g-3">
+        @csrf
+        
         <div class="col-md-4">
             <label for="roomtype_id" class="form-label">Room Type</label>
             <select name="room_id" id="room_id" class="form-select">
