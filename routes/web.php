@@ -107,6 +107,7 @@ Route::controller(TeamController::class)->group(function(){
 
     Route::get('/booking/list', 'BookingList')->name('booking.list');
     Route::get('/edit_booking/{id}', 'EditBooking')->name('edit_booking');
+    Route::get('/download/invoice/{id}', 'DownloadInvoice')->name('download.invoice');
     
       
 });
