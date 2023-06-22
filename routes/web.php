@@ -10,6 +10,7 @@ use App\Http\Controllers\Backend\RoomController;
 use App\Http\Controllers\Frontend\FrontendRoomController;
 use App\Http\Controllers\Frontend\BookingController;
 use App\Http\Controllers\Backend\RoomListController;
+use App\Http\Controllers\Backend\SettingController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -119,6 +120,16 @@ Route::controller(TeamController::class)->group(function(){
     Route::get('/view/room/list', 'ViewRoomList')->name('view.room.list');
     Route::get('/add/room/list', 'AddRoomList')->name('add.room.list'); 
     Route::post('/store/roomlist', 'StoreRoomList')->name('store.roomlist'); 
+    
+      
+});
+
+
+ /// Admin Room List All Route 
+ Route::controller(SettingController::class)->group(function(){
+
+    Route::get('/smtp/setting', 'SmtpSetting')->name('smtp.setting');
+  
     
       
 });
