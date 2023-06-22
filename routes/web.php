@@ -129,8 +129,7 @@ Route::controller(TeamController::class)->group(function(){
  Route::controller(SettingController::class)->group(function(){
 
     Route::get('/smtp/setting', 'SmtpSetting')->name('smtp.setting');
-  
-    
+    Route::post('/smtp/update', 'SmtpUpdate')->name('smtp.update');
       
 });
 
