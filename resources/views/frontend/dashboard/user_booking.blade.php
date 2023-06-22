@@ -47,35 +47,33 @@
 
     
 
-                        <table class="table table-striped">
-                            <thead>
-                              <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <td colspan="2">Larry the Bird</td>
-                                <td>@twitter</td>
-                              </tr>
-                            </tbody>
-                          </table>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+            <th scope="col">B No</th>
+            <th scope="col">B Date</th>
+            <th scope="col">Customer</th>
+            <th scope="col">Room</th>
+            <th scope="col">Check In/Out</th>
+            <th scope="col">Total Room</th>
+            <th scope="col">Guest</th> 
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($allData as $item) 
+            <tr>
+            <td>{{ $item->code }}</td>
+            <td>{{ $item->created_at->format('d/m/Y') }}</td>
+            <td>{{ $item['user']['name'] }}</td>
+            <td>{{ $item['room']['type']['name'] }}</td>
+            <td> <span class="badge bg-primary">{{ $item->check_in }}</span>  <span class="badge bg-warning text-dark">{{ $item->check_out }}</span> </td>
+            <td>{{ $item->number_of_rooms }}</td>
+            <td>{{ $item->persion }}</td>
+            </tr>
+            @endforeach
+            
+        </tbody>
+        </table>
 
 
 
