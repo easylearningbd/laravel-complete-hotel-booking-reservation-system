@@ -160,6 +160,10 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/assign_room/store/{booking_id}/{room_number_id}', 'AssignRoomStore')->name('assign_room_store');
     Route::get('/assign_room_delete/{id}', 'AssignRoomDelete')->name('assign_room_delete');
 
+    ////////// User Booking Route
+
+    Route::get('/user/booking', 'UserBooking')->name('user.booking');
+
  
 });
 
