@@ -11,6 +11,7 @@ use App\Http\Controllers\Frontend\FrontendRoomController;
 use App\Http\Controllers\Frontend\BookingController;
 use App\Http\Controllers\Backend\RoomListController;
 use App\Http\Controllers\Backend\SettingController;
+use App\Http\Controllers\Backend\TestimonialController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -132,6 +133,15 @@ Route::controller(TeamController::class)->group(function(){
     Route::post('/smtp/update', 'SmtpUpdate')->name('smtp.update');
       
 });
+
+
+ /// Tesimonial All Route 
+ Route::controller(TestimonialController::class)->group(function(){
+
+    Route::get('/all/testimonial', 'AllTestimonial')->name('all.testimonial'); 
+      
+});
+
 
 
 }); // End Admin Group Middleware 
