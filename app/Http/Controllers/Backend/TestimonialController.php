@@ -18,8 +18,35 @@ class TestimonialController extends Controller
     } // End Method 
 
 
+    public function AddTestimonial(){
+        return view('backend.tesimonial.add_testimonial');
+    }// End Method 
 
 
+    public function StoreTestimonial(Request $request){
+
+        $image = $request->file('image');
+        $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
+        Image::make($image)->resize(50,50)->save('upload/testimonial/'.$name_gen);
+        $save_url = 'upload/testimonial/'.$name_gen;
+
+        Testimonial::insert([
+
+            'name' => $request->name,
+            'city' => $request->city,
+            'message' => $request->message,
+            'image' => $save_url,
+            'created_at' => Carbon::now(),
+        ]);
+
+        $notification = array(
+            'message' => 'Testimonial Data Inserted Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('all.testimonial')->with($notification);
+
+    } // End Method 
 
 
 }
