@@ -12,6 +12,7 @@ use App\Http\Controllers\Frontend\BookingController;
 use App\Http\Controllers\Backend\RoomListController;
 use App\Http\Controllers\Backend\SettingController;
 use App\Http\Controllers\Backend\TestimonialController;
+use App\Http\Controllers\Backend\BlogController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -144,6 +145,14 @@ Route::controller(TeamController::class)->group(function(){
     Route::get('/edit/testimonial/{id}', 'EditTestimonial')->name('edit.testimonial');
     Route::post('/update/testimonial', 'UpdateTestimonial')->name('testimonial.update'); 
     Route::get('/delete/testimonial/{id}', 'DeleteTestimonial')->name('delete.testimonial');
+      
+});
+
+ /// Blog Category All Route 
+ Route::controller(BlogController::class)->group(function(){
+
+    Route::get('/blog/category', 'BlogCategory')->name('blog.category');
+   
       
 });
 
