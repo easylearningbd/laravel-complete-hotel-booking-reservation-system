@@ -141,6 +141,8 @@ Route::controller(TeamController::class)->group(function(){
     Route::get('/all/testimonial', 'AllTestimonial')->name('all.testimonial');
     Route::get('/add/testimonial', 'AddTestimonial')->name('add.testimonial'); 
     Route::post('/store/testimonial', 'StoreTestimonial')->name('testimonial.store'); 
+    Route::get('/edit/testimonial/{id}', 'EditTestimonial')->name('edit.testimonial');
+    Route::post('/update/testimonial', 'UpdateTestimonial')->name('testimonial.update'); 
       
 });
 
