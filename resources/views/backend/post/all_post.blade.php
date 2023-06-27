@@ -48,8 +48,8 @@
                             <td> <img src="{{ asset($item->post_image) }}" alt="" style="width:70px; height:40px;" > </td>
                              
                             <td>
-    <a href="{{ route('edit.team',$item->id) }}" class="btn btn-warning px-3 radius-30"> Edit</a>
-    <a href="{{ route('delete.team',$item->id) }}" class="btn btn-danger px-3 radius-30" id="delete"> Delete</a>
+    <a href="{{ route('edit.blog.post',$item->id) }}" class="btn btn-warning px-3 radius-30"> Edit</a>
+    <a href="{{ route('delete.blog.post',$item->id) }}" class="btn btn-danger px-3 radius-30" id="delete"> Delete</a>
 
                             </td>
                         </tr>
