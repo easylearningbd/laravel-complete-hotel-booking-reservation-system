@@ -26,7 +26,7 @@
                             <a href="blog-details.html">{{ $item->post_titile }}</a>
                         </h3>
                         <p>{{ $item->short_descp }}</p>
-                        <a href="blog-details.html" class="read-btn">
+                        <a href="{{ url('blog/details/'.$item->post_slug) }}" class="read-btn">
                             Read More
                         </a>
                     </div>

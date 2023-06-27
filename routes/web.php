@@ -169,7 +169,7 @@ Route::controller(TeamController::class)->group(function(){
     Route::get('/edit/blog/post/{id}', 'EditBlogPost')->name('edit.blog.post');
     Route::post('/update/blog/post', 'UpdateBlogPost')->name('update.blog.post');
     Route::get('/delete/blog/post/{id}', 'DeleteBlogPost')->name('delete.blog.post');
-   
+ 
       
 });
 
@@ -221,6 +221,15 @@ Route::middleware(['auth'])->group(function(){
 });
 
 }); // End Group Auth Middleware
+
+ /// Frontend Blog  All Route 
+ Route::controller(BlogController::class)->group(function(){
+
+    Route::get('/blog/details/{slug}', 'BlogDetails');
+   
+ 
+});
+
 
    
 
