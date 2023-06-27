@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\BlogCategory;
 use Intervention\Image\Facades\Image;
 use Carbon\Carbon;
+use App\Models\BlogPost;
 
 class BlogController extends Controller
 {
@@ -73,6 +74,19 @@ class BlogController extends Controller
         return redirect()->back()->with($notification);
 
     }// End Method 
+
+    /////////// All Blog Post Methods////////////////////
+
+    public function AllBlogPost(){
+
+        $post = BlogPost::latest()->get();
+        return view('backend.post.all_post',compact('post'));
+
+    }// End Method 
+
+
+
+
 
 
 

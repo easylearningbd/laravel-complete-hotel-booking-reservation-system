@@ -160,6 +160,16 @@ Route::controller(TeamController::class)->group(function(){
 });
 
 
+ /// Blog Post All Route 
+ Route::controller(BlogController::class)->group(function(){
+
+    Route::get('/all/blog/post', 'AllBlogPost')->name('all.blog.post');
+   
+      
+});
+
+
+
 
 }); // End Admin Group Middleware 
 
