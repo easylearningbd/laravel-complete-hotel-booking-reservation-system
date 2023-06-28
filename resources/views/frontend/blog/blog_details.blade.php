@@ -82,7 +82,7 @@
                         <div class="contact-form">
       
                             <h2>Leave A Comment</h2>
-    @php
+    @php 
         if (Auth::check()) {
            $id = Auth::user()->id;
            $userData = App\Models\User::find($id);
@@ -92,13 +92,15 @@
     @endphp
 
     @auth            
-    <form id="contactForm">
+    <form method="POST" action="{{ route('store.comment') }}" >
+        @csrf
+
         <div class="row">
              
-            <input type="text" name="post_id" value="{{ $blog->id }}">
+            <input type="hidden" name="post_id" value="{{ $blog->id }}">
 
             @if ($userData)
-                <input type="text" name="user_id" value="{{ $userData->id }}">
+                <input type="hidden" name="user_id" value="{{ $userData->id }}">
             @endif
 
 

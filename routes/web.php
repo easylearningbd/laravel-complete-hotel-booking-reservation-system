@@ -233,6 +233,15 @@ Route::middleware(['auth'])->group(function(){
  
 });
 
+/// Frontend Comment All Route 
+Route::controller(CommentController::class)->group(function(){
+ 
+    Route::post('/store/comment/', 'StoreComment')->name('store.comment');
+   
+ 
+});
+
+
 
    
 
