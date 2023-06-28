@@ -223,6 +223,16 @@ class BlogController extends Controller
         $bcategory = BlogCategory::latest()->get();
         $lpost = BlogPost::latest()->limit(3)->get();
         return view('frontend.blog.blog_cat_list',compact('blog','bcategory','lpost','namecat'));
+ 
+     }// End Method 
+
+     public function BlogList(){
+
+        $blog = BlogPost::latest()->get();
+        $bcategory = BlogCategory::latest()->get();
+        $lpost = BlogPost::latest()->limit(3)->get();
+
+        return view('frontend.blog.blog_all',compact('blog','bcategory','lpost'));
 
 
      }// End Method 
