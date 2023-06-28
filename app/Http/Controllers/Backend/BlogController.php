@@ -216,5 +216,16 @@ class BlogController extends Controller
      }// End Method 
 
 
+     public function BlogCatList($id){
+
+        $blog = BlogPost::where('blogcat_id',$id)->get();
+        $bcategory = BlogCategory::latest()->get();
+        $lpost = BlogPost::latest()->limit(3)->get();
+        return view('frontend.blog.blog_cat_list',compact('blog','bcategory','lpost'));
+
+
+     }// End Method 
+
+
 
 }
