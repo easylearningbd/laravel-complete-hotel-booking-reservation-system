@@ -10,9 +10,9 @@
                         <a href="index.html">Home</a>
                     </li>
                     <li><i class='bx bx-chevron-right'></i></li>
-                    <li>Blog Style Two</li>
+                    <li>{{ $namecat->category_name }}</li>
                 </ul>
-                <h3>Blog Style Two</h3>
+                <h3>{{ $namecat->category_name }}</h3>
             </div>
         </div>
     </div>
@@ -85,96 +85,44 @@
                         <div class="services-bar-widget">
                             <h3 class="title">Blog Category</h3>
                             <div class="side-bar-categories">
+                                @foreach ($bcategory as $cat) 
                                 <ul>
                                     <li>
-                                        <a href="#">Conference Rooms Related</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Hotel Rooms Related</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Resort Reservation Related</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Weeding Hall Related</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Community Centre Related</a>
-                                    </li>
+                                        <a href="{{ url('blog/cat/list/'.$cat->id) }}">{{ $cat->category_name }}</a>
+                                    </li> 
                                 </ul>
+                                @endforeach
                             </div>
                         </div>
                         <div class="side-bar-widget">
                             <h3 class="title">Recent Posts</h3>
                             <div class="widget-popular-post">
-                                <article class="item">
-                                    <a href="blog-details.html" class="thumb">
-                                        <span class="full-image cover bg1" role="img"></span>
-                                    </a>
-                                    <div class="info">
-                                        <h4 class="title-text">
-                                            <a href="blog-details.html">
-                                                Hotel Room Reservation is a Common Fact Now
-                                            </a>
-                                        </h4>
-                                        <ul>
-                                            <li>
-                                                <i class='bx bx-user'></i>
-                                                29K
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-message-square-detail'></i>
-                                                15K
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </article>
+                                @foreach ($lpost as $post)   
+                            <article class="item">
+                                <a href="blog-details.html" class="thumb">
+                <img src="{{ asset($post->post_image) }}" alt="Images" style="width: 80px; height:80px;">      
+                                </a>
+                                <div class="info">
+                                    <h4 class="title-text">
+                                        <a href="blog-details.html">
+                                            {{ $post->post_titile }}
+                                        </a>
+                                    </h4>
+                                    <ul>
+                                        <li>
+                                            <i class='bx bx-user'></i>
+                                            29K
+                                        </li>
+                                        <li>
+                                            <i class='bx bx-message-square-detail'></i>
+                                            15K
+                                        </li>
+                                    </ul>
+                                </div>
+                            </article>
+                            @endforeach
 
-                                <article class="item">
-                                    <a href="blog-details.html" class="thumb">
-                                        <span class="full-image cover bg2" role="img"></span>
-                                    </a>
-                                    <div class="info">
-                                        <h4 class="title-text">
-                                            <a href="blog-details.html">
-                                                We Can Easily Make a Good Hotel Management
-                                            </a>
-                                        </h4>
-                                        <ul>
-                                            <li>
-                                                <i class='bx bx-user'></i>
-                                                49K
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-message-square-detail'></i>
-                                                17K
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </article>
-
-                                <article class="item">
-                                    <a href="news-details.html" class="thumb">
-                                        <span class="full-image cover bg3" role="img"></span>
-                                    </a>
-                                    <div class="info">
-                                        <h4 class="title-text">
-                                            <a href="news-details.html">
-                                                Hotel Management Has Made a New Goal
-                                            </a> 
-                                        </h4>
-                                        <ul>
-                                            <li>
-                                                <i class='bx bx-user'></i>
-                                                69K
-                                            </li>
-                                            <li>
-                                                <i class='bx bx-message-square-detail'></i>
-                                                52K
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </article>
+                                
                             </div>
                         </div>
 
