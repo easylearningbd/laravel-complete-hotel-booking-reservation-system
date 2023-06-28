@@ -48,33 +48,24 @@
                             {!! $blog->long_descp !!}
                         </p>
                     </div>
-
+@php
+    $comment = App\Models\Comment::where('post_id',$blog->id)->where('status','1')->limit(5)->get();
+@endphp
                     <div class="comments-wrap">
                         <h3 class="title">Comments</h3>
                         <ul>
+                            @foreach ($comment as $com) 
                             <li>
-                                <img src="assets/img/blog/blog-profile1.jpg" alt="Image">
-                                <h3>Megan Fox</h3>
-                                <span>October 14, 2020, 12:10 PM</span>
+                                <img src="{{ (!empty($com->user->photo)) ? url('upload/user_images/'.$com->user->photo) : url('upload/no_image.jpg') }}" alt="Image" style="width: 50px; height:50px;">
+                                <h3>{{ $com->user->name }}</h3>
+                                <span>{{ $com->created_at->format('M d Y') }}</span>
                                 <p>
-                                    Engineering requires many building blocks and tools. To produce real world 
-                                    results & one must  mathematics and sciences to tangible problems and we 
-                                    are one of the  best company in the world. 
+                                    {{ $com->message }}
                                 </p>
                                  
                             </li>
+                            @endforeach
                             
-                            <li>
-                                <img src="assets/img/blog/blog-profile2.jpg" alt="Image">
-                                <h3>Mike Thomas</h3>
-                                <span>October 14, 2020, 11:30 AM</span>
-                                <p>
-                                    Engineering requires many building blocks and tools. To produce real world 
-                                    results & one must  mathematics and sciences to tangible problems and we 
-                                    are one of the  best company in the world. 
-                                </p>
-                                 
-                            </li>
                         </ul>
                     </div>
 
