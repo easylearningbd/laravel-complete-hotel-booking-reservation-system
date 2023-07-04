@@ -20,6 +20,13 @@ class ReportController extends Controller
 
     public function SearchByDate(Request $request){
 
+        $startDate = $request->input('start_date');
+        $endDate = $request->input('end_date');
+
+        $bookings = Booking::where('check_in', '>=', $startDate)->where('check_out', '<=', $endDate)->get();
+
+        return view('backend.report.booking_search_date',compact('startDate','endDate','bookings'));
+
     }// End Method 
 
 
