@@ -1,3 +1,7 @@
+@php
+    $setting = App\Models\SiteSetting::find(1);
+@endphp
+
 <footer class="footer-area footer-bg">
     <div class="container">
         <div class="footer-top pt-100 pb-70">
@@ -6,7 +10,7 @@
                     <div class="footer-widget">
                         <div class="footer-logo">
                             <a href="index.html">
-                                <img src="assets/img/logos/footer-logo1.png" alt="Images">
+                                <img src="{{ asset($setting->logo) }}" alt="Images">
                             </a>
                         </div>
                         <p>
@@ -15,15 +19,15 @@
                         <ul class="footer-list-contact">
                             <li>
                                 <i class='bx bx-home-alt'></i>
-                                <a href="#">123 Stanton, Virginia, USA</a>
+                                <a href="#">{{ $setting->address }}</a>
                             </li>
                             <li>
                                 <i class='bx bx-phone-call'></i>
-                                <a href="tel:+1-(123)-456-7890">+1 (123) 456 7890</a>
+                                <a href="tel:{{ $setting->phone }}">{{ $setting->phone }}</a>
                             </li>
                             <li>
                                 <i class='bx bx-envelope'></i>
-                                <a href="mailto:hello@atoli.com">hello@atoli.com</a>
+                                <a href="mailto:{{ $setting->email }}">{{ $setting->email }}</a>
                             </li>
                         </ul>
                     </div>
@@ -152,8 +156,7 @@
                 <div class="col-lg-8 col-md-8">
                     <div class="copy-right-text text-align1">
                         <p>
-                            Copyright @<script>document.write(new Date().getFullYear())</script> Atoli. All Rights Reserved by 
-                            <a href="https://hibootstrap.com/" target="_blank">HiBootstrap</a> 
+                            {{ $setting->copyright }}
                         </p>
                     </div>
                 </div>
@@ -162,10 +165,10 @@
                     <div class="social-icon text-align2">
                         <ul class="social-link">
                             <li>
-                                <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
+                                <a href="{{ $setting->facebook }}" target="_blank"><i class='bx bxl-facebook'></i></a>
                             </li> 
                             <li>
-                                <a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
+                                <a href="{{ $setting->twitter }}" target="_blank"><i class='bx bxl-twitter'></i></a>
                             </li> 
                             <li>
                                 <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>

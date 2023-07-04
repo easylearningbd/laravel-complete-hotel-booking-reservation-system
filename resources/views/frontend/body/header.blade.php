@@ -1,3 +1,8 @@
+
+@php
+    $setting = App\Models\SiteSetting::find(1);
+@endphp
+
 <header class="top-header top-header-bg">
     <div class="container">
         <div class="row align-items-center">
@@ -18,11 +23,11 @@
                     <ul>
                         <li>
                             <i class='bx bx-home-alt'></i>
-                            <a href="#">123 Virgil A Stanton, Virginia, USA</a>
+                            <a href="#">{{ $setting->address }}</a>
                         </li>
                         <li>
                             <i class='bx bx-phone-call'></i>
-                            <a href="tel:+1-(123)-456-7890">+1 (123) 456 7890</a>
+                            <a href="tel:{{ $setting->phone }}">{{ $setting->phone }}</a>
                         </li>
   
   @auth
