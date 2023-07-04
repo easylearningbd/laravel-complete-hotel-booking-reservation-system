@@ -196,6 +196,7 @@ Route::controller(ReportController::class)->group(function(){
  Route::controller(SettingController::class)->group(function(){
 
     Route::get('/site/setting', 'SiteSetting')->name('site.setting');
+    Route::post('/site/update', 'SiteUpdate')->name('site.update');
     
       
 });

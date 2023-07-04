@@ -25,7 +25,7 @@
     <div class="col-lg-8">
         <div class="card">
 
-    <form action="{{ route('smtp.update') }}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('site.update') }}" method="post" enctype="multipart/form-data">
                 @csrf
 
     <input type="hidden" name="id" value="{{ $site->id }}">
