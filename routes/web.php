@@ -192,6 +192,16 @@ Route::controller(ReportController::class)->group(function(){
 });
 
 
+ /// Site Setting All Route 
+ Route::controller(SettingController::class)->group(function(){
+
+    Route::get('/site/setting', 'SiteSetting')->name('site.setting');
+    
+      
+});
+
+
+
 
 
 }); // End Admin Group Middleware 
