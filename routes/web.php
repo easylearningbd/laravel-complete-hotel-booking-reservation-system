@@ -294,6 +294,7 @@ Route::controller(GalleryController::class)->group(function(){
 
     // Contact All Route 
     Route::get('/contact', 'ContactUs')->name('contact.us');
+    Route::post('/store/contact', 'StoreContactUs')->name('store.contact');
    
  
 });
