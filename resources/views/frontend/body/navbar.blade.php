@@ -75,7 +75,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="contact.html" class="nav-link">
+                            <a href="{{ route('contact.us') }}" class="nav-link">
                                 Contact
                             </a>
                         </li>
