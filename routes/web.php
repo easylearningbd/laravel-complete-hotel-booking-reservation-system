@@ -208,6 +208,9 @@ Route::controller(ReportController::class)->group(function(){
     Route::get('/all/gallery', 'AllGallery')->name('all.gallery');
     Route::get('/add/gallery', 'AddGallery')->name('add.gallery');
     Route::post('/store/gallery', 'StoreGallery')->name('store.gallery'); 
+    Route::get('/edit/gallery/{id}', 'EditGallery')->name('edit.gallery');
+    Route::post('/update/gallery', 'UpdateGallery')->name('update.gallery');
+    Route::get('/delete/gallery/{id}', 'DeleteGallery')->name('delete.gallery');
     
       
 });
