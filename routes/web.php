@@ -213,6 +213,9 @@ Route::controller(ReportController::class)->group(function(){
     Route::get('/delete/gallery/{id}', 'DeleteGallery')->name('delete.gallery');
 
     Route::post('/delete/gallery/multiple', 'DeleteGalleryMultiple')->name('delete.gallery.multiple');
+
+    // contact message admin view
+    Route::get('/contact/message', 'AdminContactMessage')->name('contact.message');
     
       
 });
