@@ -211,6 +211,8 @@ Route::controller(ReportController::class)->group(function(){
     Route::get('/edit/gallery/{id}', 'EditGallery')->name('edit.gallery');
     Route::post('/update/gallery', 'UpdateGallery')->name('update.gallery');
     Route::get('/delete/gallery/{id}', 'DeleteGallery')->name('delete.gallery');
+
+    Route::post('/delete/gallery/multiple', 'DeleteGalleryMultiple')->name('delete.gallery.multiple');
     
       
 });
