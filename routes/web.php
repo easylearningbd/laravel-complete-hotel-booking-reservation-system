@@ -15,6 +15,7 @@ use App\Http\Controllers\Backend\TestimonialController;
 use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\CommentController;
 use App\Http\Controllers\Backend\ReportController;
+use App\Http\Controllers\Backend\GalleryController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -200,6 +201,15 @@ Route::controller(ReportController::class)->group(function(){
     
       
 });
+
+ /// Gallery All Route 
+ Route::controller(GalleryController::class)->group(function(){
+
+    Route::get('/all/gallery', 'AllGallery')->name('all.gallery'); 
+    
+      
+});
+
 
 
 
