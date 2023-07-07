@@ -189,7 +189,7 @@ class BookingController extends Controller
         ); 
 
         Notification::send($user, new BookingComplete($request->name));
-        
+
         return redirect('/')->with($notification);  
 
     }// End Method 
@@ -376,6 +376,20 @@ class BookingController extends Controller
             'chroot' => public_path(),
         ]);
         return $pdf->download('invoice.pdf');
+
+     }// End Method 
+
+
+     public function MarkAsRead(Request $request , $notificationId){
+
+        $user = Auth::user();
+        $notification = $user->notifications()->where('id',$notificationId)->first();
+
+        if ($notification) {
+            $notification->markAsRead();
+        }
+
+  return response()->json(['count' => $user->unreadNotifications()->count()]);
 
      }// End Method 
 
