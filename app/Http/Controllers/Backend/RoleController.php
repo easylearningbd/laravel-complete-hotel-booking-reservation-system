@@ -21,6 +21,24 @@ class RoleController extends Controller
 
     } // End Method 
 
+    public function StorePermission(Request $request){
+
+        $permission = Permission::create([
+            'name' => $request->name,
+            'group_name' => $request->group_name,
+        ]);
+
+        $notification = array(
+            'message' => 'Permission Created Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('all.permission')->with($notification); 
+
+    } // End Method 
+
+
+
 
 
 }
