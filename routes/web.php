@@ -16,6 +16,7 @@ use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\CommentController;
 use App\Http\Controllers\Backend\ReportController;
 use App\Http\Controllers\Backend\GalleryController;
+use App\Http\Controllers\Backend\RoleController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -221,8 +222,15 @@ Route::controller(ReportController::class)->group(function(){
 });
 
 
+ /// Gallery All Route 
+ Route::controller(RoleController::class)->group(function(){
 
+    Route::get('/all/permission', 'AllPermission')->name('all.permission');
+    
+      
+});
 
+ 
 
 
 }); // End Admin Group Middleware 
