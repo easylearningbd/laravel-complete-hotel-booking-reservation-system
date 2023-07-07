@@ -21,6 +21,9 @@ use App\Models\RoomNumber;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\BookConfirm;
+use App\Models\User;
+use App\Notifications\BookingComplete;
+use Illuminate\Support\Facades\Notification;
 
 class BookingController extends Controller
 {
@@ -82,6 +85,8 @@ class BookingController extends Controller
     }// End Method 
 
     public function CheckoutStore(Request $request){
+
+        $user = User::where('role','admin')->get();
 
         // dd(env('STRIPE_SECRET'));
         $this->validate($request,[
@@ -182,6 +187,9 @@ class BookingController extends Controller
             'message' => 'Booking Added Successfully',
             'alert-type' => 'success'
         ); 
+
+        Notification::send($user, new BookingComplete($request->name));
+        
         return redirect('/')->with($notification);  
 
     }// End Method 
