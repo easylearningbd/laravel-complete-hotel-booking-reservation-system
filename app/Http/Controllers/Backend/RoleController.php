@@ -15,7 +15,11 @@ class RoleController extends Controller
     } // End Method 
 
 
+    public function AddPermission(){
 
+        return view('backend.pages.permission.add_permission');
+
+    } // End Method 
 
 
 

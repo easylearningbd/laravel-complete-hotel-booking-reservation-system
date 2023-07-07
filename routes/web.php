@@ -226,6 +226,8 @@ Route::controller(ReportController::class)->group(function(){
  Route::controller(RoleController::class)->group(function(){
 
     Route::get('/all/permission', 'AllPermission')->name('all.permission');
+    Route::get('/add/permission', 'AddPermission')->name('add.permission');
+
     
       
 });
