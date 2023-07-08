@@ -24,7 +24,7 @@
             </div>
 
             <div class="btn-group">
-                <a href="{{ route('add.permission') }}" class="btn btn-danger px-5">Export </a>  
+                <a href="{{ route('export') }}" class="btn btn-danger px-5">Export </a>  
             </div>
         </div>
     </div>
