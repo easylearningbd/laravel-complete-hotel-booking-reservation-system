@@ -12,7 +12,7 @@
 								<li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
 								</li>
 								<li class="breadcrumb-item active" aria-current="page">
-     <a href="{{ route('import.permission') }}" class="btn btn-warning px-5">Download Xlsx </a>  
+     <a href="{{ route('export') }}" class="btn btn-warning px-5">Export Xlsx </a>  
 
                                 </li>
 							</ol>
