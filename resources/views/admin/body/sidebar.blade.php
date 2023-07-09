@@ -20,7 +20,7 @@
             </a>
         </li>
         
-        
+        @if(Auth::user()->can('team.menu'))
         <li>
             <a href="javascript:;" class="has-arrow">
                 <div class="parent-icon"><i class="bx bx-category"></i>
@@ -28,14 +28,19 @@
                 <div class="menu-title">Manage Teams </div>
             </a>
             <ul>
+                @if(Auth::user()->can('team.all'))
                 <li> <a href="{{ route('all.team') }}"><i class='bx bx-radio-circle'></i>All Team</a>
                 </li>
+                @endif 
+                @if(Auth::user()->can('team.add'))
                 <li> <a href="{{ route('add.team') }}"><i class='bx bx-radio-circle'></i>Add Team</a>
                 </li>
-                 
+                @endif 
             </ul>
         </li>
+        @endif
 
+        @if(Auth::user()->can('bookarea.menu'))
         <li>
             <a href="javascript:;" class="has-arrow">
                 <div class="parent-icon"><i class="bx bx-category"></i>
@@ -43,11 +48,14 @@
                 <div class="menu-title">Manage Book Area </div>
             </a>
             <ul>
+                @if(Auth::user()->can('update.bookarea'))
                 <li> <a href="{{ route('book.area') }}"><i class='bx bx-radio-circle'></i>Update BookArea </a>
                 </li> 
+                @endif
                  
             </ul>
         </li>
+        @endif
 
         <li>
             <a href="javascript:;" class="has-arrow">
