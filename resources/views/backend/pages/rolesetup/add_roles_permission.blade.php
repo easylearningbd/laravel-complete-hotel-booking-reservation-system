@@ -34,7 +34,7 @@
 
             <div class="card-body p-4">
                 
-       <form  class="row g-3" action="{{ route('store.roles') }}" method="post" enctype="multipart/form-data">
+       <form  class="row g-3" action="{{ route('role.permission.store') }}" method="post" enctype="multipart/form-data">
          @csrf
 
                  
@@ -75,7 +75,7 @@
     @endphp
             @foreach ($permissions as $permission) 
                 <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="permission[]" value="" id="flexCheckDefault{{ $permission->id }}" value="{{ $permission->id }}">
+            <input class="form-check-input" type="checkbox" name="permission[]"  id="flexCheckDefault{{ $permission->id }}" value="{{ $permission->id }}">
 
                     <label class="form-check-label" for="flexCheckDefault{{ $permission->id }}">{{ $permission->name }} </label>
                 </div>
