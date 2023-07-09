@@ -258,12 +258,18 @@ Route::controller(ReportController::class)->group(function(){
     Route::get('/admin/edit/roles/{id}', 'AdminEditRoles')->name('admin.edit.roles');
     Route::post('/admin/roles/update/{id}', 'AdminRolesUpdate')->name('admin.roles.update');
     Route::get('/admin/delete/roles/{id}', 'AdminDeleteRoles')->name('admin.delete.roles');
-
-
  
       
 });
 
+
+/// Admin User All Route 
+Route::controller(AdminController::class)->group(function(){
+
+    Route::get('/all/admin', 'AllAdmin')->name('all.admin'); 
+    Route::get('/add/admin', 'AddAdmin')->name('add.admin');
+      
+});
 
  
 
