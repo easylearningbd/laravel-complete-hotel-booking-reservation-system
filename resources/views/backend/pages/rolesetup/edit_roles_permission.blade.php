@@ -34,10 +34,10 @@
 
             <div class="card-body p-4">
                 
-       <form  class="row g-3" action="{{ route('role.permission.store') }}" method="post" enctype="multipart/form-data">
+       <form  class="row g-3" action="{{ route('admin.roles.update',$role->id) }}" method="post" enctype="multipart/form-data">
          @csrf
 
-                 
+              
     
     <div class="col-md-6">
         <label for="input1" class="form-label">Roles Name </label>
